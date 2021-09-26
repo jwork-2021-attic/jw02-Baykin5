@@ -1,0 +1,84 @@
+@startuml
+
+class Snake{
+    static Geezer theGeezer;
+    Sorter sorter;
+
+
+    static Geezer getTheGeezer();
+    void setSorter(Sorter);
+    String MatrixUp(Matrix);
+    String[] parsePlan(String);
+    void execute(String);
+}
+
+class Monster{
+    int rank;
+    final int r,g,b;
+    Position position;
+
+    int rank();
+    void swapPosition(Monster)
+}
+
+
+class Linable{
+    Position position;
+
+    void setPosition(Position position);
+    Position getPosition();
+    int getValue();
+}
+class Matrix{
+    String toString;
+    Linable[] toArray;
+    Position[] positions;
+
+    void put(Linable,int);
+    Linable get(int);
+}
+
+class Position{
+
+    Linable linable;
+    void setLinable(Linable);
+}
+
+class Sorter{
+    void load(int[] elements);
+    void sort();
+    String getPlan();
+}
+class BubbleSorter{
+    int[] a;
+    void load(int[]);
+    void swap(int, int);
+}
+
+class QuickSorter{
+    int[] a;
+    void load(int[]);
+    void swap(int,int);
+    int Partition(int,int);
+    void helpSort(int,int);
+}
+class RandomNum{
+    boolean []sign;
+    Random r;
+    int size;
+    int time;
+
+    int product();
+}
+BubbleSorter --|> Sorter
+QuickSorter --|> Sorter
+Monster --|>Linable
+
+
+Matrix o-- Monster
+Monster o--o Position
+Snake o-- Sorter
+Snake o-- Matrix :MatrixUp()
+
+
+@enduml

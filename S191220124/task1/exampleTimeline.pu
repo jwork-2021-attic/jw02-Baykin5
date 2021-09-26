@@ -1,0 +1,22 @@
+@startuml
+line -[#Green]> line:new Line
+line -> Gourd :put()[7 times]
+theGeezer -[#Green]> theGeezer: new Geezer
+sorter -[#Green]> sorter: new Bubblesorter
+theGeezer -> sorter :setSorter()
+
+
+theGeezer -> line:lineUp()
+log -[#Green]> log :new String
+line ->line :toArray()
+sorter ->sorter: load()
+sorter ->sorter: sort()
+theGeezer->theGeezer:execute()
+
+writer -[#Green]> writer : new BufferedWriter
+writer -> writer:write()
+writer -> writer:flush()
+writer -> writer:close()
+
+
+@enduml

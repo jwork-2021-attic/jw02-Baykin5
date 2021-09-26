@@ -1,0 +1,70 @@
+@startuml
+
+class Geezer{
+    static Geezer theGeezer;
+    Sorter sorter;
+
+
+    static Geezer getTheGeezer();
+    void setSorter(Sorter);
+    String lineUp(Line);
+    String[] parsePlan(String);
+    void execute(String);
+}
+
+enum Gourd{
+    final int r,g,b;
+    Position position;
+
+    static Gourd getGourdByRank(int);
+    int rank();
+    void swapPosition(Gourd)
+}
+
+
+class Linable{
+    Position position;
+
+    void setPosition(Position position);
+    Position getPosition();
+    int getValue();
+}
+class Line{
+    String toString;
+    Linable[] toArray;
+    Position[] positions;
+
+    void put(Linable,int);
+    Lineble get(int);
+    
+}
+class Position{
+
+    Linable linable;
+    void setLinable(Linable);
+}
+
+class Sorter{
+    String Plan;
+    
+    void load(int[] elements);
+    void sort();
+    String getPlan();
+}
+class BubbleSorter{
+    int[] a;
+    void load(int[]);
+    void swap(int, int);
+}
+
+BubbleSorter --|> Sorter
+Gourd --|>Linable
+
+
+Line o-- Gourd
+Gourd o--o Position
+Geezer o-- Sorter
+Geezer o-- Line :lineUp()
+
+
+@enduml
