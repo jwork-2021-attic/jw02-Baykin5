@@ -1,13 +1,12 @@
-package S191220124.task2.src;
+package S191220124.task3.src;
 
-public class BubbleSorter implements Sorter {
+public class SelectSorter implements Sorter {
     private int[] a;
     private String plan = "";
 
     public void load(int[] a) {
         this.a = a;
     }
-
 
 
     private void swap(int i, int j) {
@@ -20,17 +19,18 @@ public class BubbleSorter implements Sorter {
 
     @Override
     public void sort() {
-        boolean sorted = false;
-        //for (int i=0;i<a.length;i++)
-            //System.out.println(a[i]);
-        while (!sorted) {
-            sorted = true;
-            for (int i = 0; i < a.length - 1; i++) {
-                if (a[i] > a[i + 1]) {
-                    swap(i, i + 1);
-                    sorted = false;
+        int min=0;
+        int minValue=10000000;
+        for (int i=0;i<a.length;i++) {
+            for (int j = i; j < a.length; j++) {
+                if (minValue > a[j]) {
+                    min = j;
+                    minValue = a[j];
                 }
             }
+            if (i != min)
+                swap(i, min);
+            minValue = 10000000;
         }
     }
 

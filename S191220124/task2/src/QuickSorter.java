@@ -8,9 +8,7 @@ public class QuickSorter implements Sorter {
         this.a = a;
     }
 
-    public void QuickSorter() {
 
-    }
 
     private void swap(int i, int j) {
         int temp;

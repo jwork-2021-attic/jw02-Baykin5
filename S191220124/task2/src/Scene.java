@@ -32,7 +32,7 @@ public class Scene {
 
         Snake theSnake = Snake.getTheSnake();
 
-        System.out.println("请选择排序方式:1.冒泡排序 2.快速排序");
+        System.out.println("请选择排序方式:1.冒泡排序 2.快速排序 3.选择排序");
         Scanner scanner = new Scanner(System.in); // 创建Scanner对象
         int x=scanner.nextInt();
         Sorter sorter=null;
@@ -40,6 +40,8 @@ public class Scene {
             sorter = new BubbleSorter();
         else if (x==2)
             sorter =new QuickSorter();
+        else if (x==3)
+            sorter = new SelectSorter();
 
         theSnake.setSorter(sorter);
 
