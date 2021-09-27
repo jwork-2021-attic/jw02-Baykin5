@@ -62,6 +62,11 @@ class QuickSorter{
     int Partition(int,int);
     void helpSort(int,int);
 }
+class SelectSorter{
+    int[] a;
+    void load(int[]);
+    void swap(int, int);
+}
 class RandomNum{
     boolean []sign;
     Random r;
@@ -72,6 +77,7 @@ class RandomNum{
 }
 BubbleSorter --|> Sorter
 QuickSorter --|> Sorter
+SelectSorter --|>Sorter
 Monster --|>Linable
 
 

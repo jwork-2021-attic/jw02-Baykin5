@@ -8,11 +8,11 @@
 
 ##### 类图：
 
-https://github.com/jwork-2021/jw02-Baykin5/blob/master/S191220124/task1/pic/exampleCharacter.png?raw=true
+![exampleCharacter.png](https://github.com/jwork-2021/jw02-Baykin5/blob/master/S191220124/task1/pic/exampleCharacter.png?raw=true)
 
 ##### 时序图：
 
-https://github.com/jwork-2021/jw02-Baykin5/blob/master/S191220124/task1/pic/exampleTimeline.png?raw=true
+![exampleTimeline.png](https://github.com/jwork-2021/jw02-Baykin5/blob/master/S191220124/task1/pic/exampleTimeline.png?raw=true)
 
 #### 2.尝试从面向对象编程角度理解`example`的设计理念，具体阐述这样写的好处与可改进之处（越详细越好）；
 
@@ -30,13 +30,13 @@ https://github.com/jwork-2021/jw02-Baykin5/blob/master/S191220124/task1/pic/exam
 
 - 我觉得代码书写的格式并不是很好，比如在一个类的定义中，我个人是喜欢先将类的所有成员列出，然后再写这个类的所有成员函数，这样可能对于一个没有阅读过代码的人来说比较容易了解类的整个结构以及设计思路，但是example里出现了很多先使用某个变量再定义的情况。例如下面给出的Line.java中的代码，先使用了positions，然后再给出定义，最后再给出Position类的定义，这样书写我个人觉得是很不好的。
 
-https://github.com/jwork-2021/jw02-Baykin5/blob/master/S191220124/task1/pic/image-20210925102334483.png?raw=true
+![image-20210925102334483.png](https://github.com/jwork-2021/jw02-Baykin5/blob/master/S191220124/task1/pic/image-20210925102334483.png?raw=true)
 
 ## 任务二
 
 ##### 类图：
 
-https://github.com/jwork-2021/jw02-Baykin5/blob/master/S191220124/task2/pic/task2Character.png?raw=true
+![task2Character.png](https://github.com/jwork-2021/jw02-Baykin5/blob/master/S191220124/task2/pic/task2Character.png?raw=true)
 
 ##### 可视化结果链接：
 
@@ -57,7 +57,7 @@ https://github.com/jwork-2021/jw02-Baykin5/blob/master/S191220124/task2/pic/task
 
 ##### 类图：
 
-https://github.com/jwork-2021/jw02-Baykin5/blob/master/S191220124/task3/pic/task3Character.png?raw=true
+![task3Character.png](https://github.com/jwork-2021/jw02-Baykin5/blob/master/S191220124/task3/pic/task3Character.png?raw=true)
 
 ##### 可视化结果链接：
 
